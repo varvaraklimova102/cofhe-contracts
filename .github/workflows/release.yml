@@ -16,9 +16,9 @@ jobs:
           version: latest
           run_install: false
       - name: Install deps
-        run: pnpm install --frozen-lockfile
+        run: cd contracts && pnpm install
       - name: Set publishing config
-        run: cd contracts && pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
+        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       
