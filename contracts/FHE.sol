@@ -106,7 +106,7 @@ struct SealedAddress {
 // /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\
 // ================================
 //solhint-disable const-name-snakecase
-address constant TASK_MANAGER_ADDRESS = 0x977983531Ebc7A0cc8bfF1DBB8a7E6638e13Ca6d;
+address constant TASK_MANAGER_ADDRESS = 0xbeb4eF1fcEa618C6ca38e3828B00f8D481EC2CC2;
 
 library Common {
     // Default value for temp hash calculation in unary operations
