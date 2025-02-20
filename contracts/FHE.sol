@@ -106,12 +106,12 @@ struct SealedAddress {
 // /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\
 // ================================
 //solhint-disable const-name-snakecase
-address constant TASK_MANAGER_ADDRESS = 0xbeb4eF1fcEa618C6ca38e3828B00f8D481EC2CC2;
+address constant TASK_MANAGER_ADDRESS = 0x00A14858fa95da05427b0e3277725810B44E9EB8;
 
 library Common {
     // Default value for temp hash calculation in unary operations
     string private constant DEFAULT_VALUE = "0";
-    
+
     function bigIntToBool(uint256 i) internal pure returns (bool) {
         return (i > 0);
     }
@@ -3334,7 +3334,7 @@ library FHE {
     function allow(ebool ctHash, address account) internal {
         ITaskManager(TASK_MANAGER_ADDRESS).allow(ebool.unwrap(ctHash), account);
     }
-    
+
     function allow(euint8 ctHash, address account) internal {
         ITaskManager(TASK_MANAGER_ADDRESS).allow(euint8.unwrap(ctHash), account);
     }
