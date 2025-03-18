@@ -3347,6 +3347,62 @@ library FHE {
         ITaskManager(TASK_MANAGER_ADDRESS).allow(eaddress.unwrap(ctHash), account);
     }
 
+    /// @notice Grants global permission to operate on the encrypted boolean value
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted boolean value to grant global access to
+    function allowGlobal(ebool ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(ebool.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted 8-bit unsigned integer
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted uint8 value to grant global access to
+    function allowGlobal(euint8 ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(euint8.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted 16-bit unsigned integer
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted uint16 value to grant global access to
+    function allowGlobal(euint16 ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(euint16.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted 32-bit unsigned integer
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted uint32 value to grant global access to
+    function allowGlobal(euint32 ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(euint32.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted 64-bit unsigned integer
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted uint64 value to grant global access to
+    function allowGlobal(euint64 ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(euint64.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted 128-bit unsigned integer
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted uint128 value to grant global access to
+    function allowGlobal(euint128 ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(euint128.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted 256-bit unsigned integer
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted uint256 value to grant global access to
+    function allowGlobal(euint256 ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(euint256.unwrap(ctHash));
+    }
+
+    /// @notice Grants global permission to operate on the encrypted address
+    /// @dev Allows all accounts to access the ciphertext
+    /// @param ctHash The encrypted address value to grant global access to
+    function allowGlobal(eaddress ctHash) internal {
+        ITaskManager(TASK_MANAGER_ADDRESS).allowGlobal(eaddress.unwrap(ctHash));
+    }
+
     /// @notice Checks if an account has permission to operate on the encrypted boolean value
     /// @dev Returns whether the specified account can access the ciphertext
     /// @param ctHash The encrypted boolean value to check access for
@@ -3684,6 +3740,9 @@ library BindingsEbool {
     function allowThis(ebool ctHash) internal {
         FHE.allowThis(ctHash);
     }
+    function allowGlobal(ebool ctHash) internal {
+        FHE.allowGlobal(ctHash);
+    }
     function allowSender(ebool ctHash) internal {
         FHE.allowSender(ctHash);
     }
@@ -3919,6 +3978,9 @@ library BindingsEuint8 {
     }
     function allowThis(euint8 ctHash) internal {
         FHE.allowThis(ctHash);
+    }
+    function allowGlobal(euint8 ctHash) internal {
+        FHE.allowGlobal(ctHash);
     }
     function allowSender(euint8 ctHash) internal {
         FHE.allowSender(ctHash);
@@ -4156,6 +4218,9 @@ library BindingsEuint16 {
     function allowThis(euint16 ctHash) internal {
         FHE.allowThis(ctHash);
     }
+    function allowGlobal(euint16 ctHash) internal {
+        FHE.allowGlobal(ctHash);
+    }
     function allowSender(euint16 ctHash) internal {
         FHE.allowSender(ctHash);
     }
@@ -4392,6 +4457,9 @@ library BindingsEuint32 {
     function allowThis(euint32 ctHash) internal {
         FHE.allowThis(ctHash);
     }
+    function allowGlobal(euint32 ctHash) internal {
+        FHE.allowGlobal(ctHash);
+    }
     function allowSender(euint32 ctHash) internal {
         FHE.allowSender(ctHash);
     }
@@ -4610,6 +4678,9 @@ library BindingsEuint64 {
     function allowThis(euint64 ctHash) internal {
         FHE.allowThis(ctHash);
     }
+    function allowGlobal(euint64 ctHash) internal {
+        FHE.allowGlobal(ctHash);
+    }
     function allowSender(euint64 ctHash) internal {
         FHE.allowSender(ctHash);
     }
@@ -4811,6 +4882,9 @@ library BindingsEuint128 {
     function allowThis(euint128 ctHash) internal {
         FHE.allowThis(ctHash);
     }
+    function allowGlobal(euint128 ctHash) internal {
+        FHE.allowGlobal(ctHash);
+    }
     function allowSender(euint128 ctHash) internal {
         FHE.allowSender(ctHash);
     }
@@ -4872,6 +4946,9 @@ library BindingsEuint256 {
     function allowThis(euint256 ctHash) internal {
         FHE.allowThis(ctHash);
     }
+    function allowGlobal(euint256 ctHash) internal {
+        FHE.allowGlobal(ctHash);
+    }
     function allowSender(euint256 ctHash) internal {
         FHE.allowSender(ctHash);
     }
@@ -4932,6 +5009,9 @@ library BindingsEaddress {
     }
     function allowThis(eaddress ctHash) internal {
         FHE.allowThis(ctHash);
+    }
+    function allowGlobal(eaddress ctHash) internal {
+        FHE.allowGlobal(ctHash);
     }
     function allowSender(eaddress ctHash) internal {
         FHE.allowSender(ctHash);
